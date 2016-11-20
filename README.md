@@ -30,6 +30,14 @@ relay.relayServer(portNumber);
 
 - Use the above module in your Node app as mentioned in the usage. This will create a server listening over the mentioned port.
 
-- Run the app ![Image 01][i01]
+- Run the app 
+- ![Image 01][i01]
+- Now to connect to the running server, we will use telnet. 
+- Client
+- ![Image 02][i02]
+- Server
+- ![Image 03][i03]
 
 [i01]: ./images/i01.png
+[i02]: ./images/i02.png
+[i03]: ./images/i03.png
