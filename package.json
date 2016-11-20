@@ -1,0 +1,26 @@
+{
+  "name": "tcp-relayer",
+  "version": "0.0.0",
+  "description": "Node.js module to relay raw TCP data from one socket to another",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarsjits/tcp-relayer.git"
+  },
+  "keywords": [
+    "tcp"
+  ],
+  "author": "Jitendra Sarswat <sarsjits@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sarsjits/tcp-relayer/issues"
+  },
+  "homepage": "https://github.com/sarsjits/tcp-relayer#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2"
+  }
+}
