@@ -42,9 +42,16 @@ relay.relayServer(portNumber);
 - ![Image 04][i04]
 - Server
 - ![Image 05][i05]
+- As soon as another client connects to the server, buffered messages are sent to the client. The two clients can now communicate via server.
+- Client 2
+- ![Image 06][i06]
+- Server
+- ![Image 07][i07]
 
 [i01]: ./images/i01.png
 [i02]: ./images/i02.png
 [i03]: ./images/i03.png
 [i04]: ./images/i04.png
 [i05]: ./images/i05.png
+[i06]: ./images/i06.png
+[i07]: ./images/i07.png
