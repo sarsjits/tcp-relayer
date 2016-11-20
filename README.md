@@ -33,11 +33,18 @@ relay.relayServer(portNumber);
 - Run the app 
 - ![Image 01][i01]
 - Now to connect to the running server, we will use telnet. 
-- Client
+- Client 1
 - ![Image 02][i02]
 - Server
 - ![Image 03][i03]
+- Sending message to the server even no other TCP client is yet connected.
+- Client 1
+- ![Image 04][i04]
+- Server
+- ![Image 05][i05]
 
 [i01]: ./images/i01.png
 [i02]: ./images/i02.png
 [i03]: ./images/i03.png
+[i04]: ./images/i04.png
+[i05]: ./images/i05.png
