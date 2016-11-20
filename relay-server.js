@@ -9,6 +9,7 @@ exports.relayServer = function(serverPort) {
 	var server = net.createServer();
 
 	server.on("connection", function(socket) {
+		console.log(socket.remoteAddress + ":" + socket.remotePort);
 		clients.push(socket);
 		if(clients.length > 2) {
 			clients.splice(2,1);
@@ -61,4 +62,6 @@ exports.relayServer = function(serverPort) {
 	server.listen(serverPort, function() {
 		console.log("The server is listening on %j", server.address());
 	});
+	
+	return server;
 }
