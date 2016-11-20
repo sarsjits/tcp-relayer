@@ -25,3 +25,11 @@ var relay = require('tcp-relayer');
 
 relay.relayServer(portNumber);
 ```
+
+## Example
+
+- Use the above module in your Node app as mentioned in the usage. This will create a server listening over the mentioned port.
+
+- Run the app ![Image 01][i01]
+
+[i01]: ./images/i01.png
