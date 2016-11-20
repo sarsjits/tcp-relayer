@@ -47,6 +47,11 @@ relay.relayServer(portNumber);
 - ![Image 06][i06]
 - Server
 - ![Image 07][i07]
+- If the connection between two TCP clients is already established. The server will drop the new incoming connection.
+- Client 3
+- ![Image 08][i08]
+- Server
+- ![Image 09][i09]
 
 [i01]: ./images/i01.png
 [i02]: ./images/i02.png
@@ -55,3 +60,5 @@ relay.relayServer(portNumber);
 [i05]: ./images/i05.png
 [i06]: ./images/i06.png
 [i07]: ./images/i07.png
+[i08]: ./images/i08.png
+[i09]: ./images/i09.png
