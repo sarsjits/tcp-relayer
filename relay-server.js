@@ -44,7 +44,7 @@ exports.relayServer = function(serverPort) {
 		socket.on("close", function() {
 			console.log("Connection closed: " + socket.remoteAddress + ":" + socket.remotePort);
 			var idx = clients.indexOf(socket);
-			console.log("Index while closing: " + idx);
+			//console.log("Index while closing: " + idx);
 			if(idx !== -1)
 				clients.splice(idx,1);
 			if(clients.length === 0) {
