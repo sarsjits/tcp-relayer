@@ -13,7 +13,7 @@ server.on("connection", function(socket) {
 		console.log("Dropping off the connection from: " + socket.remoteAddress + ":" + socket.remotePort);
 		socket.destroy();
 	}
-	if(clients.length == 1) {
+	if(clients.length === 1) {
 		console.log("Waiting for one more TCP connection.");
 	} else {
 		console.log("Condition met.");
@@ -23,7 +23,7 @@ server.on("connection", function(socket) {
 		var idx = clients.indexOf(socket);
 		if(clients.length < 2) {
 			console.log("For data to be transmitted, two TCP clients must be connected.");
-		} else if(clients.length == 2 && idx !== -1) {
+		} else if(clients.length === 2 && idx !== -1) {
 			var clientToSend = idx ^ 1;
 			clients[clientToSend].write(socket.remoteAddress + ':' + socket.remotePort + ':' + data);
 		}
@@ -35,7 +35,7 @@ server.on("connection", function(socket) {
 		console.log("Index while closing: " + idx);
 		if(idx !== -1)
 			clients.splice(idx,1);
-		if(clients.length == 0) {
+		if(clients.length === 0) {
 			console.log("No client is currently connected. Waiting for new connection.");
 		} else if (clients.length == 1) {
 			console.log("Waiting for one more client to be connected.");
