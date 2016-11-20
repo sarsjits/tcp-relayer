@@ -4,6 +4,7 @@ var net = require("net");
 var server = net.createServer();
 
 var clients = [];
+var buffers = [];
 
 server.on("connection", function(socket) {
 	clients.push(socket);
@@ -23,7 +24,15 @@ server.on("connection", function(socket) {
 		var idx = clients.indexOf(socket);
 		if(clients.length < 2) {
 			console.log("For data to be transmitted, two TCP clients must be connected.");
+			console.log("Currently buffering the data.");
+			buffers.push(data);
 		} else if(clients.length === 2 && idx !== -1) {
+			if(buffers.length !== 0) {
+				for(var i=0;i<buffers.length;++i) {
+					clients[1].write(clients[0].remoteAddress + ":" + clients[0].remotePort + buffers[i]);
+				}
+				buffers = [];
+			}
 			var clientToSend = idx ^ 1;
 			clients[clientToSend].write(socket.remoteAddress + ':' + socket.remotePort + ':' + data);
 		}
