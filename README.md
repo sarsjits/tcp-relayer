@@ -53,6 +53,15 @@ relay.relayServer(portNumber);
 - Server
 - ![Image 09][i09]
 
+## Future Work
+
+- Extending to multiple pair of connections
+- Standalone app supporting Graphical Interface.
+
+## Suggestions
+
+Provide the feedback at sarsjits@gmail.com
+
 [i01]: ./images/i01.png
 [i02]: ./images/i02.png
 [i03]: ./images/i03.png
