@@ -55,7 +55,8 @@ exports.relayServer = function(serverPort) {
 		});
 	
 		socket.on("error", function(err) {
-		
+			console.log("Error occured from connection: " + socket.remoteAddress + ":" + socket.remotePort);
+			console.log("Error: %s", err);
 		});
 	});
 
